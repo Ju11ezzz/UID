@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.titlebar {
+    background: #181818;
+    padding: 10px 15px;
+    border-bottom: 1px solid #333;
+    -webkit-app-region: drag;
+}
+
+.toolbar {
+    background: #2d2d2d;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.toolbar button {
+    background: #3a3a3a;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.toolbar button:hover { background: #0078d4; }
+
+/* Обгортка для стабільності інтерфейсу */
+.editor-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-editor {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.visible-editor {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+textarea {
+    flex: 1;
+    background: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+    resize: none;
+    font-family: Consolas, monospace;
+}
+
+/* Екран привітання */
+.welcome-screen {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: #1e1e1e;
+}
+
+.welcome-content {
+    text-align: center;
+    max-width: 400px;
+    color: #888;
+}
+
+.welcome-content h2 { color: #ccc; margin-bottom: 15px; }
+
+.statusbar {
+    background: #2d2d2d;
+    padding: 8px 15px;
+    font-size: 13px;
+    border-top: 1px solid #3c3c3c;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Модалка */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: #252526;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    border: 1px solid #444;
+}
+
+.modal-footer { text-align: right; margin-top: 20px; }
+.modal-footer button { padding: 8px 15px; margin-left: 10px; cursor: pointer; border-radius: 4px; border: none; color: white; }
+#yesBtn { background: #0078d7; }
+#noBtn { background: #444; }
+#cancelBtn { background: #c42b1c; }

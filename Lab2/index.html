@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="titlebar">
+    <div class="title" id="windowTitle">Текстовий редактор</div>
+</div>
+
+<div class="toolbar">
+    <button id="btnNew">Новий</button>
+    <button id="btnOpen">Відкрити</button>
+    <button id="btnSave">Зберегти</button>
+    <button id="btnExit">Вихід</button>
+</div>
+
+<div class="editor-wrapper">
+    <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <h2>Привіт👋</h2>
+            <p>Щоб почати роботу, натисни <strong>"Новий"</strong> або <strong>"Відкрити"</strong> на панелі зверху.</p>
+        </div>
+    </div>
+    
+    <textarea id="editor" class="hidden-editor" placeholder="Почніть вводити текст..."></textarea>
+</div>
+
+<div class="statusbar">
+    <div id="stats"></div>
+    <div id="statusText">Готово</div>
+</div>
+
+<div id="saveModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">Попередження</div>
+        <div class="modal-body">У вас є незбережені зміни. Зберегти перед виходом?</div>
+        <div class="modal-footer">
+            <button id="yesBtn">Так</button>
+            <button id="noBtn">Ні</button>
+            <button id="cancelBtn">Скасувати</button>
+        </div>
+    </div>
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>
