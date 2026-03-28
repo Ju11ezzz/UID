@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+button, .file-label {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover, .file-label:hover {
+  background-color: #e0e0e0;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 14px;
+  color: #666;
+}
+
+.editor {
+  flex-grow: 1;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+}
+
+.editor:focus {
+  border-color: #007bff;
+}
